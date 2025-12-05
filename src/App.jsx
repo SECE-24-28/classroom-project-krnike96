@@ -1,7 +1,10 @@
 import "./App.css";
+import CourseComponent from "./course-component/course-component";
 import HelloWorldComponent from "./hello-world/hello-world-component";
 import UserTable from "./hello-world/table";
+import ImpactAtAGlanceComponent from "./impact-at-a-glance/impact-component";
 import LeadersTomorrowComponent from "./leaders-tomorrow/leaders-tomorrow-component";
+import OurPromiseComponent from "./our-promise-component/our-promise-component";
 import PositioningComponent from "./positioning/positioning-component";
 import TrustedbyComponent from "./trusted-by/trusted-by-component";
 import VisionComponent from "./vision-component/vision-component";
@@ -21,10 +24,13 @@ function App() {
     // </Container>
     // <HelloWorldComponent />
     <div>
-      {/* <VisionComponent/>
-      <LeadersTomorrowComponent/> */}
+      <VisionComponent/>
+      <LeadersTomorrowComponent/> 
       {/* <PositioningComponent/> */}
       <TrustedbyComponent/>
+      <ImpactAtAGlanceComponent/>
+      <OurPromiseComponent />
+      <CourseComponent />
     </div>
   );
 }
