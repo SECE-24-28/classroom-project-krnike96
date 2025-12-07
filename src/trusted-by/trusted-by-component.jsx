@@ -1,32 +1,82 @@
 import React from "react";
 import { TrustedByStyle } from "./trusted-by-style";
-const TrustedbyComponent = () => {
+import { TrustedByData } from "./trusted-by-data";
+
+// Helper function to render Font Awesome icons in JSX format
+const renderIconSvg = (icon, color) => {
+  const path = icon.icon[4];
+
+  return (
+    <svg
+      aria-hidden="true"
+      focusable="false"
+      data-prefix="fas"
+      data-icon={icon.iconName}
+      className={`svg-inline--fa fa-${icon.iconName} fa-xl`}
+      role="img"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox={`0 0 ${icon.icon[0]} ${icon.icon[1]}`}
+      color={color}
+    >
+      <path fill="currentColor" d={path}></path>
+    </svg>
+  );
+};
+
+const TrustedByComponent = () => {
   return (
     <TrustedByStyle>
-      <h1>Trusted By</h1>
       <div className="parent">
-        <div className="child">
-          <span className="numbers">100+</span>
-          <br></br>
-          <span className="details">Colleges</span>
+        <div>
+          <h1 className="title">Trusted By</h1>
         </div>
-        <div className="child">
-          <span className="numbers">150</span>
-          <br></br>
-          <span className="details">Professional Trainers</span>
-        </div>
-        <div className="child">
-          <span className="numbers">1000+</span>
-          <br></br>
-          <span className="details">Study Materials</span>
-        </div>
-        <div className="child">
-          <span className="numbers"> 100000+</span>
-          <br></br>
-          <span className="details">Students</span>
+        <div className="element">
+          {TrustedByData.map((item, index) => {
+            const boundaryClass =
+              item.boundaryType === "up"
+                ? "image-boundary-up"
+                : "image-boundary-down";
+
+            const boundaryStyle = { backgroundColor: item.color };
+
+            let backgroundDivs;
+
+            if (item.boundaryType === "down") {
+              backgroundDivs = (
+                <>
+                  <div
+                    className="upper-background"
+                    style={{ backgroundColor: item.color }}
+                  ></div>
+                </>
+              );
+            } else {
+              backgroundDivs = (
+                <div
+                  className="lower-background"
+                  style={{ backgroundColor: item.color }}
+                ></div>
+              );
+            }
+            return (
+              <div className="item" key={index}>
+                <div className="main-area">
+                  <div className={boundaryClass} style={boundaryStyle}>
+                    <div className="image">
+                      {renderIconSvg(item.icon, item.color)}
+                    </div>
+                  </div>
+                  <div className="subtitle">{item.subtitle}</div>
+                  <div className="para">{item.para}</div>
+                </div>
+                {backgroundDivs}
+              </div>
+            );
+          })}
         </div>
       </div>
     </TrustedByStyle>
   );
 };
-export default TrustedbyComponent;
+
+export default TrustedByComponent;

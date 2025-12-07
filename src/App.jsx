@@ -24,13 +24,13 @@ function App() {
     // </Container>
     // <HelloWorldComponent />
     <div>
-      <VisionComponent/>
-      <LeadersTomorrowComponent/> 
+      {/* <VisionComponent/> */}
+      {/* <LeadersTomorrowComponent/>  */}
       {/* <PositioningComponent/> */}
       <TrustedbyComponent/>
-      <ImpactAtAGlanceComponent/>
-      <OurPromiseComponent />
-      <CourseComponent />
+      {/* <ImpactAtAGlanceComponent/> */}
+      {/* <OurPromiseComponent /> */}
+      {/* <CourseComponent /> */}
     </div>
   );
 }

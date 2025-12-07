@@ -10,7 +10,6 @@ export const OurPromiseStyle = styled.div`
     margin: 1rem auto;
     border-radius: 10px;
     box-sizing: border-box;
-    list-style-type: none;
     margin: 0;
     padding: 0;
   }
@@ -21,7 +20,6 @@ export const OurPromiseStyle = styled.div`
     text-align: center;
     font-family: "Work Sans", sans-serif;
     box-sizing: border-box;
-    list-style-type: none;
     margin: 0;
     padding: 0;
   }
@@ -55,7 +53,6 @@ export const OurPromiseStyle = styled.div`
     background-color: rgb(255, 255, 255);
     position: relative;
     box-sizing: border-box;
-    list-style-type: none;
     font-family: Work Sans, normal, sans-serif;
     font-size: 16px;
   }
@@ -86,7 +83,6 @@ export const OurPromiseStyle = styled.div`
 
   .item {
     display: flex;
-    -moz-box-align: center;
     align-items: center;
     gap: 17px;
     font-family: Work Sans, normal, sans-serif;
