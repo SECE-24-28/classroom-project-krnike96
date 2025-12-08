@@ -1,8 +1,8 @@
 import React from "react";
 import { TrustedByStyle } from "./trusted-by-style";
 import { TrustedByData } from "./trusted-by-data";
+import { useParams } from "react-router-dom";
 
-// Helper function to render Font Awesome icons in JSX format
 const renderIconSvg = (icon, color) => {
   const path = icon.icon[4];
 
@@ -24,6 +24,8 @@ const renderIconSvg = (icon, color) => {
 };
 
 const TrustedByComponent = () => {
+  const {id } = useParams();
+  console.log(`The Id is : ${id}`);
   return (
     <TrustedByStyle>
       <div className="parent">
