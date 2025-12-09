@@ -12,6 +12,11 @@ import { Route, Routes } from "react-router-dom";
 import FourNotFourComponent from "./404-component/four-not-four-component";
 import RouterComponent from "./router-component/router-component";
 import UseStateFormComponent from "./use-state-form/use-state-form-component";
+import SignUpPageComponent from "./signup-page/signup-page-component";
+import FetchApiComponent from "./fetch-api-component/fetch-api-component";
+import UseEffectComponent from "./use-effect-practice/use-effect-practice";
+import UseEffectComponentTwo from "./use-effect-practice/use-effect-practice-two";
+import UseEffectComponentThree from "./use-effect-practice/use-state-practice-three";
 // import styled from "styled-components";
 
 // const Container = styled.div`
@@ -36,7 +41,7 @@ function App() {
       {/* <OurPromiseComponent /> */}
       {/* <CourseComponent /> */}
 
-      <Routes>
+      {/* <Routes>
         <Route path="/" element={<RouterComponent />}></Route>
         <Route path="/trusted-by/:id" element={<TrustedbyComponent />}></Route>
         <Route
@@ -52,6 +57,15 @@ function App() {
           element={<UseStateFormComponent />}
         ></Route>
         <Route path="*" element={<FourNotFourComponent />}></Route>
+      </Routes> */}
+      <Routes>
+        <Route path="*" element={<FourNotFourComponent />}></Route>
+        <Route path="/" element = {<SignUpPageComponent/>}></Route>
+        <Route path="/fetch-api" element = {<FetchApiComponent/>}></Route>
+        <Route path="/use-effect-practice" element = {<UseEffectComponent/>}></Route>
+        <Route path="/use-effect-practice-two" element = {<UseEffectComponentTwo/>}></Route>
+        <Route path="/use-effect-practice-three" element = {<UseEffectComponentThree/>}></Route>
+        <Route></Route>
       </Routes>
     </div>
   );
