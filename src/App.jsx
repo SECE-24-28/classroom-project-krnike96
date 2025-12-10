@@ -17,6 +17,8 @@ import FetchApiComponent from "./fetch-api-component/fetch-api-component";
 import UseEffectComponent from "./use-effect-practice/use-effect-practice";
 import UseEffectComponentTwo from "./use-effect-practice/use-effect-practice-two";
 import UseEffectComponentThree from "./use-effect-practice/use-state-practice-three";
+import FurnitureComponent from "./figma-component-one/furniture-component/furniture-component";
+import OurFacilitiesComponent from "./figma-component-one/our-facilities-component/our-facilities-component";
 // import styled from "styled-components";
 
 // const Container = styled.div`
@@ -65,7 +67,8 @@ function App() {
         <Route path="/use-effect-practice" element = {<UseEffectComponent/>}></Route>
         <Route path="/use-effect-practice-two" element = {<UseEffectComponentTwo/>}></Route>
         <Route path="/use-effect-practice-three" element = {<UseEffectComponentThree/>}></Route>
-        <Route></Route>
+        <Route path="/furniture" element = {<FurnitureComponent/>}></Route>
+        <Route path="/our-facilities" element={<OurFacilitiesComponent/>}></Route>
       </Routes>
     </div>
   );
