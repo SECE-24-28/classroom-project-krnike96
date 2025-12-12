@@ -19,6 +19,8 @@ import UseEffectComponentTwo from "./use-effect-practice/use-effect-practice-two
 import UseEffectComponentThree from "./use-effect-practice/use-state-practice-three";
 import FurnitureComponent from "./figma-component-one/furniture-component/furniture-component";
 import OurFacilitiesComponent from "./figma-component-one/our-facilities-component/our-facilities-component";
+import SignupFormComponent from "./signup-form/signup-form-component";
+import AdditionOperationComponent from "./addition-operation-in-state/addition-operation-component";
 // import styled from "styled-components";
 
 // const Container = styled.div`
@@ -42,6 +44,8 @@ function App() {
       {/* <ImpactAtAGlanceComponent/> */}
       {/* <OurPromiseComponent /> */}
       {/* <CourseComponent /> */}
+      {/* <SignUpPageComponent/> */}
+      <AdditionOperationComponent/>
 
       {/* <Routes>
         <Route path="/" element={<RouterComponent />}></Route>
@@ -69,6 +73,7 @@ function App() {
         <Route path="/use-effect-practice-three" element = {<UseEffectComponentThree/>}></Route>
         <Route path="/furniture" element = {<FurnitureComponent/>}></Route>
         <Route path="/our-facilities" element={<OurFacilitiesComponent/>}></Route>
+        <Route path="/signup-form" element={<SignupFormComponent/>}></Route>
       </Routes>
     </div>
   );
